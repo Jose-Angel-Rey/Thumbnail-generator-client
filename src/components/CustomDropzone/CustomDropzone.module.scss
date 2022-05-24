@@ -1,0 +1,59 @@
+.container {
+    border: 3px dashed #bbb;
+    background: linear-gradient(145deg, #212121, #282828);
+    border-radius: 1rem;
+    box-shadow: 18px 18px 30px #161616,
+        -18px -18px 30px #343434;
+    cursor: pointer;
+    width: 17rem;
+    height: 15rem;
+    border-radius: 1rem;
+    padding: 3rem;
+    transition: all .4s;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: center;
+
+    &Active {
+        border-color: #0AF9CF;
+    }
+
+    &:hover {
+        box-shadow: 22px 22px 34px #161616,
+            -22px -22px 34px #343434;
+        transform: scale(1.01);
+    }
+
+    &:active {
+        transform: scale(.95);
+        border-color: #fff;
+    }
+
+    &input {
+        display: none;
+    }
+}
+
+.dropMessage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    margin-bottom: -1.5rem;
+    text-align: center;
+    font-size: 1.2rem;
+
+    svg {
+        font-size: 2.5rem;
+    }
+}
+
+.previewImage {
+    position: absolute;
+    max-height: 85%;
+    max-width: 95%;
+    opacity: .1;
+}
