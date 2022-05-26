@@ -1,0 +1,36 @@
+.container {
+    animation: fadeIn .4s ease-in-out forwards;
+    animation-duration: 4s;
+    background: #151515;
+    border: 1px solid #202020;
+    border-radius: 5px;
+    cursor: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 1rem;
+    transition: all .5s;
+    z-index: 5000;
+
+    svg {
+        font-size: 1.5rem;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    5% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
