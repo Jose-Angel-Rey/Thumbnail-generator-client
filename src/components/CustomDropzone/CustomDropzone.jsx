@@ -1,20 +1,18 @@
 import styles from "./CustomDropzone.module.scss";
+import useLocalStorage from "../../hooks/useLocalStorage";
+import validateImageFormat from "../../helpers/validateImageFormat";
+import convertBlobToBase64 from "../../helpers/convertBlobToBase64";
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { useDropzone } from "react-dropzone";
-import { CloudUploadOutlined } from "@ant-design/icons";
 import { useDispatch } from "react-redux";
 import { setLocalImage } from "../../redux/actions";
-import { useNavigate } from "react-router-dom";
+import { CloudUploadOutlined } from "@ant-design/icons";
 
-const imageExtensionValidation = (file) => {
-  const extension = file?.name?.split(".").pop();
-  const validExtensions = ["jpeg", "png"];
-  return validExtensions.includes(extension);
-};
-
-export default function CustomDropzone({ setisValidImageExtension }) {
+const CustomDropzone = ({ setisValidImageExtension }) => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
+  const { setItem } = useLocalStorage();
   const [files, setFiles] = useState([]);
 
   const { getRootProps, getInputProps, isDragActive } = useDropzone({
@@ -32,22 +30,25 @@ export default function CustomDropzone({ setisValidImageExtension }) {
           })
         )
       );
-      setisValidImageExtension(imageExtensionValidation(acceptedFiles[0]));
+      setisValidImageExtension(validateImageFormat(acceptedFiles[0].name));
     },
-    onError: (error) => {
-      console.log("Dropzone error: ", error);
-    },
+    onError: (error) => setisValidImageExtension(false),
   });
 
   useEffect(() => {
-    files.length > 0 &&
-      imageExtensionValidation(files[0]) &&
-      dispatch(setLocalImage(files[0].preview)) &&
+    if (files.length > 0 && validateImageFormat(files[0].name)) {
+      const [image] = files;
+      convertBlobToBase64(image).then((base64) => {
+        setItem("localImage", base64);
+        dispatch(setLocalImage(base64));
+      });
       navigate("/preview");
-  }, [files, dispatch, navigate]);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [files]);
 
   return (
-    <div
+    <section
       className={`${styles.container} ${
         isDragActive && styles.containerActive
       } `}
@@ -66,6 +67,8 @@ export default function CustomDropzone({ setisValidImageExtension }) {
             : "Click or drag and drop the image here"}
         </p>
       </div>
-    </div>
+    </section>
   );
-}
+};
+
+export default CustomDropzone;

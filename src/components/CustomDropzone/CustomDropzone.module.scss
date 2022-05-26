@@ -5,16 +5,20 @@
     box-shadow: 18px 18px 30px #161616,
         -18px -18px 30px #343434;
     cursor: pointer;
-    width: 17rem;
-    height: 15rem;
     border-radius: 1rem;
-    padding: 3rem;
-    transition: all .4s;
     display: flex;
-    align-items: center;
     flex-wrap: wrap;
-    position: relative;
+    align-items: center;
     justify-content: center;
+    height: 15rem;
+    padding: 3rem;
+    position: relative;
+    transition: all .4s;
+    width: 17rem;
+
+    &input {
+        display: none;
+    }
 
     &Active {
         border-color: #0AF9CF;
@@ -27,16 +31,14 @@
     }
 
     &:active {
-        transform: scale(.95);
         border-color: #fff;
+        transform: scale(.95);
     }
 
-    &input {
-        display: none;
-    }
 }
 
 .dropMessage {
+    font-size: 1.2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -44,7 +46,6 @@
     gap: .5rem;
     margin-bottom: -1.5rem;
     text-align: center;
-    font-size: 1.2rem;
 
     svg {
         font-size: 2.5rem;
@@ -52,8 +53,8 @@
 }
 
 .previewImage {
-    position: absolute;
     max-height: 85%;
     max-width: 95%;
     opacity: .1;
+    position: absolute;
 }
