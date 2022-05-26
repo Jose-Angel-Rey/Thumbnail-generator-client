@@ -9,7 +9,11 @@ import { useDispatch } from "react-redux";
 import { setLocalImage } from "../../redux/actions";
 import { CloudUploadOutlined } from "@ant-design/icons";
 
-const CustomDropzone = ({ setisValidImageExtension }) => {
+type CustomDropzoneProps = {
+  setisValidImageExtension: (isValidImageExtension: boolean) => void;
+};
+
+const CustomDropzone = ({ setisValidImageExtension }: CustomDropzoneProps) => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { setItem } = useLocalStorage();
@@ -24,6 +28,7 @@ const CustomDropzone = ({ setisValidImageExtension }) => {
     multiple: false,
     onDrop: (acceptedFiles) => {
       setFiles(
+        // @ts-ignore
         acceptedFiles.map((file) =>
           Object.assign(file, {
             preview: URL.createObjectURL(file),
@@ -36,11 +41,12 @@ const CustomDropzone = ({ setisValidImageExtension }) => {
   });
 
   useEffect(() => {
+    // @ts-ignore
     if (files.length > 0 && validateImageFormat(files[0].name)) {
       const [image] = files;
       convertBlobToBase64(image).then((base64) => {
-        setItem("localImage", base64);
-        dispatch(setLocalImage(base64));
+        setItem("localImage", base64 as string);
+        dispatch(setLocalImage(base64 as string));
       });
       navigate("/preview");
     }
