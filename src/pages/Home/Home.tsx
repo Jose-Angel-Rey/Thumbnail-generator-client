@@ -34,7 +34,7 @@ const Home = () => {
           </button>
 
           <p className={styles.contentLoginAlt}>
-            or <Link to="/preview">continue without logging in</Link>
+            or <Link to="/upload-image">continue without logging in</Link>
           </p>
         </Col>
       </Row>
