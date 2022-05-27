@@ -9,6 +9,7 @@ import { useDispatch } from "react-redux";
 import { setLocalImage } from "../../redux/actions";
 import { Row, Col, Empty } from "antd";
 import { CameraFilled, ArrowLeftOutlined } from "@ant-design/icons";
+import CustomButton from "../../components/CustomButton/CustomButton";
 
 const Camera = () => {
   const dispatch = useDispatch();
@@ -55,17 +56,14 @@ const Camera = () => {
                   text="Go Back"
                   icon={<ArrowLeftOutlined />}
                 />
-                <button
-                  className={styles.webcamButton}
-                  type="button"
+                <CustomButton
                   onClick={() =>
                     // @ts-ignore
                     setImageSrc(webcamRef?.current?.getScreenshot())
                   }
-                >
-                  <CameraFilled />
-                  Take Picture
-                </button>
+                  icon={<CameraFilled />}
+                  text="Take Picture"
+                />
               </div>
             </>
           ) : (

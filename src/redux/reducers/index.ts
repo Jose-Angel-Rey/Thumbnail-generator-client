@@ -17,7 +17,7 @@ const initialState: IState = {
 
 const rootReducer = (state = initialState, action: IAction) => {
   const { type, payload } = action;
-  
+
   switch (type) {
     case SET_LOCAL_IMAGE:
       return {

@@ -1,0 +1,45 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto !important;
+    position: relative;
+    min-height: 25rem;
+    height: 100vh;
+    overflow: hidden;
+    width: 100%;
+}
+
+.content {
+    &Title {
+        font-size: 3rem;
+        font-weight: bold;
+        text-shadow: 0 0 2px #000;
+        color: #fff;
+        text-align: center;
+        padding: 1rem;
+        width: 100%;
+        z-index: 100;
+    }
+
+    &Image {
+        animation: rotate 20s infinite linear;
+        max-width: 30rem;
+        transform: rotate(80deg);
+        position: absolute;
+        top: 15%;
+        left: 30%;
+        opacity: .5;
+        width: 70%;
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

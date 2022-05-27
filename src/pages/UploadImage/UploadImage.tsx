@@ -1,12 +1,12 @@
 import styles from "./UploadImage.module.scss";
+import AnimatedPage from "../../components/AnimatedPage/AnimatedPage";
 import CustomDropzone from "../../components/CustomDropzone/CustomDropzone";
 import { CameraOutlined } from "@ant-design/icons";
 import { Row, Col } from "antd";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-import AnimatedPage from "../../components/AnimatedPage/AnimatedPage";
 
-function UploadImage() {
+const UploadImage = () => {
   const navigate = useNavigate();
   const [isValidImageExtension, setisValidImageExtension] = useState(true);
 
@@ -25,6 +25,7 @@ function UploadImage() {
             <CustomDropzone
               setisValidImageExtension={setisValidImageExtension}
             />
+
             <button
               className={styles.uploadOptionsCameraButton}
               type="button"
@@ -38,6 +39,6 @@ function UploadImage() {
       </Row>
     </AnimatedPage>
   );
-}
+};
 
 export default UploadImage;

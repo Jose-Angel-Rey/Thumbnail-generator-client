@@ -1,14 +1,14 @@
 import styles from "./ThumbnailCard.module.scss";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import { useEffect, useState } from "react";
+import { Image } from "antd";
 import downloadImage from "../../helpers/downloadImage";
+import CustomToast from "../CustomToast/CustomToast";
 import {
   CopyOutlined,
   CloudDownloadOutlined,
   EyeOutlined,
 } from "@ant-design/icons";
-import { Image } from "antd";
-import CustomToast from "../CustomToast/CustomToast";
 
 type ThumbnailCardProps = {
   imageSrc: string;
@@ -49,6 +49,7 @@ const ThumbnailCard = ({ imageSrc, height, width }: ThumbnailCardProps) => {
             <CopyOutlined />
           </button>
         </CopyToClipboard>
+
         <button
           type="button"
           onClick={() =>

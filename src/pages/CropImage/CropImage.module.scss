@@ -1,5 +1,5 @@
 .container {
-    padding: 3rem 1rem;
+    padding: 4rem 1rem;
     min-height: 100vh;
 }
 
@@ -53,38 +53,4 @@
     align-items: center;
     gap: 3rem;
     width: 95%;
-
-    button {
-        background: linear-gradient(145deg, #212121, #282828);
-        border: none;
-        border-radius: .5rem;
-        box-shadow: 18px 18px 30px #161616,
-            -18px -18px 30px #343434;
-        cursor: pointer;
-        color: #fff;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-        font-size: 1rem;
-        outline: none;
-        padding: .9rem 1.5rem;
-        transition: all .4s;
-        width: 240px;
-
-        svg {
-            font-size: 1.2rem;
-        }
-
-        &:hover {
-            color: #fff;
-            box-shadow: 22px 22px 34px #161616,
-                -22px -22px 34px #343434;
-            transform: scale(1.02);
-        }
-
-        &:active {
-            transform: scale(.95);
-        }
-    }
 }

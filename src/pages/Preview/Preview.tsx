@@ -42,6 +42,7 @@ const Preview = () => {
   return (
     <AnimatedPage>
       {isLoading && <Loader message="Generating thumbnails..." />}
+
       <Row justify="center" align="top" className={styles.container}>
         <Col span={24} className={styles.contentCol}>
           {(localImage || getItem("localImage")) && (

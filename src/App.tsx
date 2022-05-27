@@ -2,7 +2,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 import AnimatedRoutes from "./components/AnimatedRoutes/AnimatedRoutes";
 import LogoutButton from "./components/LogoutButton/LogoutButton";
 
-function App() {
+const App = () => {
   const { isAuthenticated, user } = useAuth0();
   isAuthenticated && console.log(user);
 
@@ -12,6 +12,6 @@ function App() {
       {isAuthenticated && <LogoutButton />}
     </div>
   );
-}
+};
 
 export default App;

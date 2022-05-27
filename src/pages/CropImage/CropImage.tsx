@@ -4,6 +4,7 @@ import NavigationButton from "../../components/NavigationButton/NavigationButton
 import useLocalStorage from "../../hooks/useLocalStorage";
 import getCroppedImg from "../../helpers/cropImage";
 import Cropper from "react-easy-crop";
+import CustomButton from "../../components/CustomButton/CustomButton";
 import { useCallback, useEffect, useState } from "react";
 import { Point, Area } from "react-easy-crop/types";
 import { useNavigate } from "react-router-dom";
@@ -109,10 +110,11 @@ const EditImage = () => {
               text="Cancel"
               icon={<CloseOutlined />}
             />
-            <button type="button" onClick={() => showCroppedImage()}>
-              <SaveFilled />
-              Save
-            </button>
+            <CustomButton
+              onClick={() => showCroppedImage()}
+              icon={<SaveFilled />}
+              text="Save"
+            />
           </section>
         </Col>
       </Row>

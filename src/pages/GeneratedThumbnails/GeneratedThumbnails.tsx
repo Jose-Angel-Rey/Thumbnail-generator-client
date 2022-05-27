@@ -59,7 +59,7 @@ const GeneratedThumbnails = () => {
 
           <div className={styles.thumbnailsContainer}>
             {generatedThumbnails?.thumbnails &&
-              generatedThumbnails?.thumbnails.map((thumbnail, index) => (
+              generatedThumbnails?.thumbnails?.map((thumbnail, index) => (
                 <ThumbnailCard
                   imageSrc={thumbnail.secure_url}
                   height={thumbnail.height}
