@@ -1,0 +1,62 @@
+.container {
+    min-height: 100vh;
+    padding: 3rem 0;
+}
+
+.content {
+    border-radius: 10px;
+    background: #252525;
+    box-shadow: 18px 18px 30px #161616,
+        -18px -18px 30px #343434;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: auto;
+    max-width: 550px;
+    padding: 4rem 1rem;
+
+    @media (max-width: 575px) {
+        background: transparent;
+        box-shadow: none;
+    }
+
+    &Title {
+        color: #fff;
+        text-align: center;
+        width: 100%;
+    }
+
+    &LoginButton {
+        cursor: pointer;
+        background: linear-gradient(145deg, #212121, #282828);
+        border: none;
+        border-radius: 5rem;
+        box-shadow: 18px 18px 30px #161616,
+            -18px -18px 30px #343434;
+        font-size: 1rem;
+        margin: 3rem auto 2.5rem auto;
+        outline: none;
+        padding: .9rem 6rem;
+        transition: all .4s;
+
+        &:hover {
+            box-shadow: 22px 22px 34px #161616,
+                -22px -22px 34px #343434;
+            transform: scale(1.02);
+        }
+
+        &:active {
+            transform: scale(.95);
+        }
+    }
+
+    &LoginAlt {
+        color: #fff;
+
+        a {
+
+            color: #0AF9CF;
+        }
+    }
+}
