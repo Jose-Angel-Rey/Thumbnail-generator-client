@@ -1,0 +1,84 @@
+.card {
+    cursor: pointer;
+    background: linear-gradient(145deg, #212121, #282828);
+    border: none;
+    border-radius: .5rem;
+    box-shadow: 18px 18px 30px #161616,
+        -18px -18px 30px #343434;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 17rem;
+    text-align: center;
+    position: relative;
+    padding-top: 1rem;
+    transition: all .4s;
+    width: 95%;
+
+    &Title {
+        margin: 0;
+        color: #fff;
+        font-size: 1rem;
+        padding: .7rem 0;
+    }
+
+
+    &Image {
+        height: 100px;
+        object-fit: cover;
+        object-position: center;
+        width: 90%;
+    }
+
+    &Actions {
+        background: #161616;
+        border-radius: 0 0 .5rem .5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+
+        button {
+            border: none;
+            color: #ccc;
+            cursor: pointer;
+            outline: none;
+            background: transparent;
+            padding: .5rem 0;
+            transition: all .3s;
+            width: 100%;
+
+            &:hover {
+                svg {
+                    color: #fff;
+                    transform: scale(1.05);
+                }
+            }
+            &:active {
+                svg {
+                    color: #0AF9CF;
+                    transform: scale(1);
+                }
+            }
+
+            &:first-child {
+                border-bottom-left-radius: .5rem;
+            }
+
+            &:nth-child(2) {
+                border-left: 1px solid #343434;
+                border-right: 1px solid #343434;
+            }
+
+            &:last-child {
+                border-bottom-right-radius: .5rem;
+            }
+
+            svg {
+                font-size: 1.2rem;
+                transition: all .3s;
+            }
+        }
+    }
+}
