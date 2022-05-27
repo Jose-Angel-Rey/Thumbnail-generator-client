@@ -1,0 +1,72 @@
+.container {
+    padding: 7rem 1.5rem 4rem;
+    min-height: 100vh;
+}
+
+.contentCol {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+    margin: auto;
+}
+
+
+.uploadOptions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    width: 90%;
+
+    &Description {
+        font-size: 1rem;
+        margin: auto;
+        margin-bottom: -1rem;
+        text-align: center;
+        width: 90%;
+
+        strong {
+            color: #0AF9CF;
+            display: block;
+            font-size: .8rem;
+            margin-top: 5px;
+        }
+    }
+
+    &CameraButton {
+        cursor: pointer;
+        background: linear-gradient(145deg, #212121, #282828);
+        border: none;
+        border-radius: 1rem;
+        box-shadow: 18px 18px 30px #161616,
+            -18px -18px 30px #343434;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        font-size: 1.5rem;
+        outline: none;
+        padding: .9rem 1.5rem;
+        transition: all .4s;
+        height: 15rem;
+        width: 17rem;
+
+        svg {
+            font-size: 2.5rem;
+        }
+
+        &:hover {
+            box-shadow: 22px 22px 34px #161616,
+                -22px -22px 34px #343434;
+            transform: scale(1.01);
+        }
+
+        &:active {
+            transform: scale(.95);
+        }
+
+    }
+}
