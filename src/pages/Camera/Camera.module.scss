@@ -1,0 +1,74 @@
+.container {
+    padding: 3rem 1rem;
+    min-height: 100vh;
+}
+
+.contentCol {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin: auto;
+}
+
+.webcam {
+    border: 1px solid #797979;
+    background-color: #212121;
+    background-image: url("https://ik.imagekit.io/8k98kll7xyh/Gifs/loading_9Dm7b4Uga.gif?ik-sdk-version=javascript-1.4.3&updatedAt=1653327782868");
+    background-size: 5%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 1rem;
+    max-height: 30rem;
+    max-width: 40rem;
+    width: 80%;
+
+    @media (max-width: 768px) {
+        width: 100%;
+    }
+
+    &ButtonsContainer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+        width: 100%;
+    }
+
+    &Button {
+        background: linear-gradient(145deg, #212121, #282828);
+        border: none;
+        border-radius: .5rem;
+        box-shadow: 18px 18px 30px #161616,
+            -18px -18px 30px #343434;
+        cursor: pointer;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        font-size: 1rem;
+        outline: none;
+        padding: .9rem 1.5rem;
+        transition: all .4s;
+        width: 240px;
+
+        svg {
+            font-size: 1.2rem;
+        }
+
+        &:hover {
+            color: #fff;
+            box-shadow: 22px 22px 34px #161616,
+                -22px -22px 34px #343434;
+            transform: scale(1.02);
+        }
+
+        &:active {
+            transform: scale(.95);
+        }
+    }
+}
