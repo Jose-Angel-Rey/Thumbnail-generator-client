@@ -1,0 +1,84 @@
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.popover {
+    animation: fadeIn 1s ease forwards;
+    position: fixed;
+    bottom: unset;
+    top: 1.5rem;
+    opacity: 0;
+    right: 4%;
+    transform: scale(.90);
+    transition: all .5s;
+    z-index: 1000;
+
+    @media screen and (max-width: 768px) {
+        right: 1.5rem;
+    }
+}
+
+.content {
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: .5rem;
+    align-items: flex-start;
+
+    &Button {
+        background: transparent;
+        outline: none;
+        border: none;
+        cursor: pointer;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &Link {
+        color: #000;
+        text-decoration: none;
+        transition: all .2s ease-in-out;
+
+        &:hover {
+            color: #000;
+            text-decoration: underline;
+        }
+    }
+}
+
+.button {
+    cursor: pointer;
+    background: linear-gradient(145deg, #212121, #282828);
+    border: none;
+    border-radius: 100%;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 1rem;
+    outline: none;
+    padding: .8rem;
+    transition: all .4s;
+
+    svg {
+        font-size: 1.3rem;
+    }
+
+    &:hover {
+        border-color: transparent;
+        box-shadow: 8px 8px 14px #161616,
+            -8px -8px 15px #343434;
+        transform: scale(1.02);
+    }
+
+    &:active {
+        transform: scale(.95);
+    }
+}
