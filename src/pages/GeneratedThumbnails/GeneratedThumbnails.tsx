@@ -10,7 +10,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { IState } from "../../redux/interfaces/index";
 import { Row, Col } from "antd";
-import { ArrowLeftOutlined } from "@ant-design/icons";
+import { FileImageOutlined } from "@ant-design/icons";
 import {
   deleteImage,
   getThumbnails,
@@ -71,8 +71,8 @@ const GeneratedThumbnails = () => {
 
           <div className={styles.buttonsContainer}>
             <CustomButton
-              text="Change image"
-              icon={<ArrowLeftOutlined />}
+              text="Generate thumbnails from other image"
+              icon={<FileImageOutlined />}
               onClick={() => resetUploadProcess()}
             />
           </div>

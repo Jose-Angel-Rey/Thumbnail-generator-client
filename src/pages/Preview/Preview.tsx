@@ -3,6 +3,7 @@ import AnimatedPage from "../../components/AnimatedPage/AnimatedPage";
 import NavigationButton from "../../components/NavigationButton/NavigationButton";
 import useLocalStorage from "../../hooks/useLocalStorage";
 import Loader from "../../components/Loader/Loader";
+import NavigationMenu from "../../components/NavigationMenu/NavigationMenu";
 import CustomButton from "../../components/CustomButton/CustomButton";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
@@ -12,7 +13,7 @@ import { IState } from "../../redux/interfaces/index";
 import { Row, Col } from "antd";
 import {
   FileImageOutlined,
-  EditOutlined,
+  ScissorOutlined,
   ArrowLeftOutlined,
 } from "@ant-design/icons";
 
@@ -41,6 +42,7 @@ const Preview = () => {
 
   return (
     <AnimatedPage>
+      <NavigationMenu />
       {isLoading && <Loader message="Generating thumbnails..." />}
 
       <Row justify="center" align="top" className={styles.container}>
@@ -61,7 +63,7 @@ const Preview = () => {
             />
             <NavigationButton
               text="Crop image"
-              icon={<EditOutlined />}
+              icon={<ScissorOutlined />}
               to="/crop-image"
             />
             <CustomButton

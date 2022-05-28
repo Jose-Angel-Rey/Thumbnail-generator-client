@@ -5,13 +5,14 @@ import { CameraOutlined } from "@ant-design/icons";
 import { Row, Col } from "antd";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import NavigationMenu from "../../components/NavigationMenu/NavigationMenu";
 
 const UploadImage = () => {
   const navigate = useNavigate();
   const [isValidImageExtension, setisValidImageExtension] = useState(true);
-
   return (
     <AnimatedPage>
+      <NavigationMenu />
       <Row justify="center" align="top" className={styles.container}>
         <Col span={24} className={styles.contentCol}>
           <section className={styles.uploadOptions}>

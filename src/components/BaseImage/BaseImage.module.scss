@@ -11,6 +11,10 @@
         flex-wrap: nowrap;
         gap: 3rem;
     }
+
+    @media screen and(min-width: 1100px) {
+        gap: 4rem;
+    }
 }
 
 .buttonsCol {
