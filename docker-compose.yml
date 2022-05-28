@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  development:
+    container_name: thumb-generator-client-development
+    image: thumb-generator-client-development
+    build:
+      context: .
+      target: development
+    volumes:
+      - ./src:/app/src
+    ports:
+      - 3000:3000
