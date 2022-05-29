@@ -1,6 +1,46 @@
-# Getting Started with Create React App
+<div align="center">
+  <h1>Thumbnail generator app</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+  [![THUMB](https://img.shields.io/badge/Go_to_Thumbnail_generator-404040?style=for-the-badge&logo=ko-fi&logoColor=white)](https://thumbnail-generator-app.vercel.app/)
+  
+  <img src="https://user-images.githubusercontent.com/76404798/170847471-925a11c4-70d1-43ce-9e98-3ac3d7e42fa3.png" alt="Cover image" width="100%" />  
+</div>  
+
+---
+
+This application is in charge of generating thumbnails based on an image that can be uploaded by the user from his device or by taking a picture with the camera.
+
+The user will have the option to crop or resize the image before it is processed and generate thumbnails.
+
+After uploading the image the thumbnails will be generated and the user will be able to preview the result, copy the image link to the clipboard or download the image.
+
+---
+
+## Features
+
+- Responsive web design
+- Login and user registration implemented using Auth0 services
+- Upload images by drag and drop or by clicking on the marked area
+- Upload images using the device camera
+- Crop or resize the image to be used to generate thumbnails
+- Displays load statuses depending on the operation being performed
+- Preview the generated thumbnail
+- Copy the generated thumbnail link to clipboard
+- Download the generated thumbnail 
+<!-- - It's Dockerized for local development -->
+<!-- - Includes unit and end-to-end tests -->
+
+---
+
+## Environment variables
+
+The application only needs the configuration of 2 environment variables which are used for the login service with Aunth0.
+
+`REACT_APP_AUTH0_CLIENT_ID`
+
+`REACT_APP_AUTH0_DOMAIN`
+
+---
 
 ## Available Scripts
 
@@ -38,6 +78,8 @@ If you aren’t satisfied with the build tool and configuration choices, you can
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+
 
 ## Learn More
 
