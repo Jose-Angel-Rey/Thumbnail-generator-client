@@ -14,7 +14,7 @@ const ImagePropsList = ({
   height,
 }: ImagePropsListProps) => {
   return (
-    <ul className={styles.imagePropsList}>
+    <ul className={styles.imagePropsList} aria-label="Image properties">
       <li className={styles.imagePropsListItem}>
         <strong>Format: </strong>
         <span>{format}</span>

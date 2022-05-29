@@ -7,7 +7,7 @@ type LoaderProps = {
 
 const Loader = ({ message }: LoaderProps) => {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} aria-label="Loader">
       <Loading3QuartersOutlined spin />
       <h2>{message}</h2>
     </div>

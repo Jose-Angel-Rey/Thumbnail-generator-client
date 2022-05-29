@@ -7,7 +7,7 @@ type CustomToastProps = {
 
 const CustomToast = ({ icon, message }: CustomToastProps) => {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} title={message}>
       {icon}
       {message}
     </div>
