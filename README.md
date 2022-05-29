@@ -27,8 +27,8 @@ After uploading the image the thumbnails will be generated and the user will be 
 - Preview the generated thumbnail
 - Copy the generated thumbnail link to clipboard
 - Download the generated thumbnail 
-- It's Dockerized for local development
-- Includes unit and end-to-end tests
+<!-- - It's Dockerized for local development -->
+<!-- - Includes unit and end-to-end tests -->
 
 ---
 
