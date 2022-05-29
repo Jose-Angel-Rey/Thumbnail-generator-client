@@ -40,6 +40,13 @@ The application only needs the configuration of 2 environment variables which ar
 
 `REACT_APP_AUTH0_DOMAIN`
 
+Both environment variables can be obtained by creating a Single Page Application with React in Auth0 and giving permissions to `http://localhost:3000` to make requests to that service in order to run the login service.
+
+![Group 3](https://user-images.githubusercontent.com/76404798/170895710-29a40184-b51b-4631-b585-9fd1b536895f.png)
+
+
+In the application you will find an `.env.sample` file which you can use as a template to generate the `.env` file in which to place the corresponding values of the environment variables.
+
 ---
 
 ## Available Scripts
@@ -52,6 +59,15 @@ Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.\
+You will also see any lint errors in the console.
+
+### `yarn dev`
+
+Run the application in development mode via a Docker image.
+
+Open http://localhost:3000 to view it in the browser.
+
+The page will reload if you make edits.
 You will also see any lint errors in the console.
 
 ### `yarn test`
