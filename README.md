@@ -34,7 +34,7 @@ After uploading the image the thumbnails will be generated and the user will be 
 
 ## Environment variables
 
-The application only needs the configuration of 2 environment variables which are used for the login service with Aunth0.
+The application only needs the configuration of 2 environment variables which are used for the login service with Auth0.
 
 `REACT_APP_AUTH0_CLIENT_ID`
 
