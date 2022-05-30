@@ -64,6 +64,7 @@ const ThumbnailCard = ({ imageSrc, height, width }: ThumbnailCardProps) => {
       <Image
         style={{ display: "none" }}
         src={imageSrc}
+        title="Thumbnail preview"
         preview={{
           visible: isShowingImage,
           src: imageSrc,
